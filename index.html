@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Maps API</title>
+		<link rel="stylesheet" href="css/app.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style type="text/css">
+	      html, body { height: 100%; margin: 0; padding: 0; }
+	    </style>
+	</head>
+	<body>
+		<header>My Map - Google Map API
+			<div id="hamburger" data-bind="click: toggleNav, clickBubble: false">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+				</svg>
+			</div>
+		</header>
+		<nav>
+			<div id="locations" data-bind="css: navVisible">
+				<form>
+					<input id="filter" name="filter" data-bind="textInput:  userInput, valueUpdate: 'keyup' " autocomplete="off" placeholder="Filter / Search">
+				</form>
+				<ul  data-bind = "foreach: visiblePlaces">
+					<li data-bind = "text : name, click: $parent.showInfo"></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="map"></div>
+
+
+		<script src="js-lib/jquery-1.11.3.min.js"></script>
+		<script src="js-lib/knockout-3.4.0.js"></script>
+
+		<script src="js/map.js"></script>
+
+
+		<script async defer
+	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGSC14AQseSLAhwQ_HebuTdrZlE8z7FaM&callback=initMap">
+	    </script>
+	</body>
+</html>

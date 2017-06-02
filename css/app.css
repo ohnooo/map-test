@@ -1,0 +1,78 @@
+/* css map app */
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#map { height: 100%; }
+
+
+
+header{
+	padding:10px 15px;
+	background:#000;
+	color:#fff;
+}
+
+svg {
+  display: none;
+}
+
+nav{
+	background-color:#ccc;
+	padding:20px 10px;
+	position:absolute;
+	right:5%;
+	z-index: 20;
+}
+
+#locations{
+
+	margin-right: 20px;
+	position:relative;
+	float:right;
+}
+
+@media only screen and (max-width: 550px){
+
+	#hamburger {
+	    position: fixed;
+	    left: 85%;
+	    right: 0;
+	    top: 0;
+	    width: 40px;
+    }
+
+    svg {
+	    display: block;
+	    width: 40px;
+	    fill: #fff;
+    }
+
+    .navDisplayNon{
+    	display:none;
+    }
+}
+
+
+/* Location alight left
+header{
+	padding:10px 15px;
+	background:#000;
+	color:#fff;
+}
+
+#map {
+	height: 100%;
+	width:75%;
+	display:block;
+	float:right;
+	position:relative;
+}
+
+
+#locations{
+	display:block;
+	float:left;
+	z-index: 10;
+}*/
+
