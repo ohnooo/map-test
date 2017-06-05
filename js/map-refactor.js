@@ -57,15 +57,7 @@ var Map = function(){
 	thiz.markers = [];
 	thiz.mapCenter = null;
 
-	// search param
-	thiz.searchLocation = '台北松江路125號',
-	thiz.query = '診所',
-	thiz.request = {
-		location: '',
-		radius : 500,
-		type: ['health'],
-		query: thiz.query
-	};
+	
 
 	// Starts here
 	thiz.setSearchArea(locations);
@@ -140,7 +132,7 @@ Map.prototype = {
 
 		google.maps.event.addListener(marker, 'click', function(){
 			thiz.infowindow.setContent(contentString);
-			thiz.infowindow.open(thiz.gmap, thiz);
+			thiz.infowindow.open(thiz.gmap, marker);
 		});
 
         thiz.gmap.fitBounds(thiz.bounds);
