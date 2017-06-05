@@ -18,27 +18,17 @@
 				</svg>
 			</div>
 		</header>
-		<nav>
-			<div id="locations" data-bind="css: navVisible">
-				<form>
-					<input id="filter" name="filter" data-bind="textInput:  userInput, valueUpdate: 'keyup' " autocomplete="off" placeholder="Filter / Search">
-				</form>
-				<ul  data-bind = "foreach: visiblePlaces">
-					<li data-bind = "text : name, click: $parent.showInfo"></li>
-				</ul>
-			</div>
-		</nav>
+
 		<div id="map"></div>
 
 
 		<script src="js-lib/jquery-1.11.3.min.js"></script>
-		<script src="js-lib/knockout-3.4.0.js"></script>
 
-		<script src="js/map.js"></script>
+		<script src="js/map-refactor.js"></script>
 
 
 		<script async defer
-	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGSC14AQseSLAhwQ_HebuTdrZlE8z7FaM&callback=initMap">
-	    </script>
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvzebUQ-cKL2Q2Yk15vmYVbdnZXlgwQZw&libraries=places&callback=initMap">
+		</script>
 	</body>
 </html>
